@@ -9,7 +9,20 @@
 </head>
 
 <body>
-  
+  <div class="highlight highlight-source-js"><pre><span class="pl-c">/**</span>
+<span class="pl-c">*remove String Blanks</span>
+<span class="pl-c">*@string {String} </span>
+<span class="pl-c">*@isGlobal {Boolean}</span>
+<span class="pl-c">*<span class="pl-k">@return</span> <span class="pl-en">{String}</span></span>
+<span class="pl-c">*/</span>
+<span class="pl-k">function</span> <span class="pl-en">RemoveStringBlanks</span>(<span class="pl-smi">string</span>,<span class="pl-smi">isGlobal</span><span class="pl-k">=</span><span class="pl-c1">false</span>){
+  <span class="pl-k">var</span> res <span class="pl-k">=</span> <span class="pl-smi">string</span>.<span class="pl-c1">replace</span>(<span class="pl-sr"><span class="pl-pds">/</span>(<span class="pl-k">^</span><span class="pl-c1">\s</span><span class="pl-k">+</span>)<span class="pl-k">|</span>(<span class="pl-c1">\s</span><span class="pl-k">+</span><span class="pl-k">$</span>)<span class="pl-pds">/</span>g</span>,<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>);
+  <span class="pl-k">if</span>(isGlobal <span class="pl-k">===</span> <span class="pl-s"><span class="pl-pds">'</span>true<span class="pl-pds">'</span></span> <span class="pl-k">||</span> isGlobal <span class="pl-k">===</span> <span class="pl-c1">true</span>){
+    res <span class="pl-k">=</span> <span class="pl-smi">string</span>.<span class="pl-c1">replace</span>(<span class="pl-sr"><span class="pl-pds">/</span><span class="pl-c1">\s</span><span class="pl-k">+</span><span class="pl-pds">/</span>g</span>,<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>);
+  }
+  <span class="pl-k">return</span> res;
+}
+</pre></div>
   123131
 </body>
 </html>
